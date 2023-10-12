@@ -1,17 +1,18 @@
-const fetch = require('node-fetch') 
+import fetch from 'node-fetch'
 
-exports.handler = async function () {
+export const handler = async (event, context) => {
+  const eventBody = JSON.parse(event.body)
+  const POKE_API = 'https://pokeapi.co/api/v2/pokedex/' + eventBody.region
 
-  const POKE_API = 'https://pokeapi.co/api/v2/pokedex/kanto'
+  const response = await fetch(POKE_API)
+  const data = await response.json()
 
-    const response = await fetch(POKE_API)
-    const data = await response.json()
-
-    return {
-        statusCode: 200,
-        body: JSON.stringify(data)
-            
-    }
-
-
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      pokemon: data.pokemon_entries
+    })
+  }
 }
+
+
