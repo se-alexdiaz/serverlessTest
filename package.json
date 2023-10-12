@@ -1,0 +1,22 @@
+{
+  "name": "serverlesstest",
+  "version": "1.0.0",
+  "description": "Learn how to use serverless functions in less than 30 minutes!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/se-alexdiaz/serverlessTest.git"
+  },
+  "author": "Alejandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/se-alexdiaz/serverlessTest.git/issues"
+  },
+  "homepage": "https://github.com/se-alexdiaz/serverlessTest.git#readme",
+  "devDependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
